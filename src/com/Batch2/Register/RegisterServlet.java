@@ -27,6 +27,9 @@ public class RegisterServlet extends HttpServlet {
 	r.setCity(city);
 	int result = RegisterDAO.addRegister(r);
 	System.out.println(result);
+	if(result>0) {
+		response.sendRedirect("Regsiter.jsp");
+	}
 	}
 
 }
